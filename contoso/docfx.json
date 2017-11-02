@@ -6,14 +6,34 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "group": "legacy",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
+          "_themes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices"
-        ]
+        ],
+        "src": "legacy"
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "group": "active",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ],
+        "src": "active"
       }
     ],
     "resource": [
@@ -23,19 +43,46 @@
           "**/*.jpg"
         ],
         "exclude": [
+          "_themes/**",
           "**/obj/**",
           "**/includes/**"
-        ]
+        ],
+        "src": "legacy",
+        "group": "legacy"
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ],
+        "src": "active",
+        "group": "active"
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/e2eppe-versiontest/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "titleSuffix": "Contoso", 
+      "uhfHeaderId": "MSDocsHeader-DotNet", 
+      "extendBreadcrumb": true 
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "e2eppe-versiontest"
+    "dest": "contoso",
+    "exportRawModel": true,
+    "groups": {
+      "legacy": {
+        "dest": "legacy",
+        "moniker_range": "< contososerver-2.0"
+      }, 
+      "active": {
+        "dest": "active",
+        "moniker_range": ">= contososerver-2.0 || >= contosoclient-1.0"
+      }
+    }
   }
 }
