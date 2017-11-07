@@ -9,4 +9,4 @@ This content should display for the following monikers:
 * contosoclient-2.0
 
 ## imgtest
-![image](../1.png)
+![image](./1.png)
