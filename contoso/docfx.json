@@ -5,8 +5,6 @@
         "files": [
           "**/*.md",
           "**/*.yml",
-          "**/*.jpg",
-          "**/*.png"
         ],
         "group": "legacy",
         "exclude": [
