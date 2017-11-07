@@ -19,4 +19,6 @@ This section applies only to `contososerver-1.2`
 ::: moniker-end
 
 You should see two different sections displayed above, depending on which version is selected.
-```
+
+## imgtest
+![image](./testImage.jpg)
