@@ -16,7 +16,22 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
-    }
+    },
+	{
+      "docset_name": "e2eppe-versiontest",
+      "build_source_folder": "articles",
+      "build_output_subfolder": "e2eppe-versiontest",
+      "locale": "en-us",
+      "monikers": [],      
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
