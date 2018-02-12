@@ -20,7 +20,7 @@
 	{
       "docset_name": "e2eppe-versiontest",
       "build_source_folder": "articles",
-      "build_output_subfolder": "e2eppe-versiontest",
+      "build_output_subfolder": "e2eppe-locfilemaptest",
       "locale": "en-us",
       "monikers": [],      
       "open_to_public_contributors": false,
