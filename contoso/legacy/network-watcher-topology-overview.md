@@ -1,3 +1,4 @@
+::: moniker range="contososerver-1.0"
 ---
 title: Introduction to topology in Azure Network Watcher | Microsoft Docs
 description: This page provides an overview of the Network Watcher topology capabilities
@@ -40,3 +41,4 @@ Learn how to use PowerShell to retrieve the Topology view by visiting Network Wa
 <!--Image references-->
 
 [1]: ./media/network-watcher-topology-overview/topology.png
+::: moniker-end
