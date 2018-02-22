@@ -3,6 +3,5 @@
 This content should display for the following monikers:
 
 * contososerver-2.0
-* contososerver-2.1
-* contosoclient-1.0
-* contosoclient-2.0
+
+* [Link to Version2.0 content] (assign-policy-definition.md)
