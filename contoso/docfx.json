@@ -81,7 +81,7 @@
       }, 
       "active": {
         "dest": "active",
-        "moniker_range": "> contososerver-2.0 || >= contosoclient-1.0"
+        "moniker_range": ">= contososerver-2.0 || >= contosoclient-1.0"
       }
     }
   }
