@@ -34,7 +34,7 @@
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,  
   "need_generate_intellisense": false,
-  "use_docfxv3": true
+  "use_docfxv3": true,
   "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
