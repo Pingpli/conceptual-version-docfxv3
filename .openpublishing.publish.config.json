@@ -2,24 +2,8 @@
   "docsets_to_publish": [
     {
       "docset_name": "conceptual-version-docfxv3",
-      "build_source_folder": ".",
-      "build_output_subfolder": "conceptual-version-docfxv3",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "e2eppe-versiontest",
       "build_source_folder": "contoso",
-      "build_output_subfolder": "e2eppe-versiontest",
+      "build_output_subfolder": "conceptual-version-docfxv3",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -48,10 +32,12 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
+  "need_generate_pdf_url_template": false,  
+  "need_generate_intellisense": false,
+  "use_docfxv3": true
   "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
-    }
+     }
   }
 }
