@@ -1,47 +1,49 @@
 {
-  "build_entry_point": "docs",
-  "docsets_to_publish": [
-    {
-      "docset_name": "conceptual-version-docfxv3",
-      "build_source_folder": "contoso",
-      "build_output_subfolder": "conceptual-version-docfxv3",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [ "< contososerver-2.0", ">= contososerver-2.0 || >= contosoclient-1.0" ],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    }
-  ],
-  "notification_subscribers": [],
-  "branches_to_filter": [],
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    },
-    {		
- 		  "path_to_root": "_themes.pdf",		
- 		  "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-  	  "branch": "master"		
-    }
-  ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": true,  
-  "need_generate_intellisense": false,
-  "use_docfxv3": true,
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  }
+	"build_entry_point": "docs",
+	"docsets_to_publish": [{
+		"docset_name": "conceptual-version-docfxv3",
+		"build_source_folder": "contoso",
+		"build_output_subfolder": "conceptual-version-docfxv3",
+		"locale": "en-us",
+		"monikers": [],
+		"moniker_ranges": ["< contososerver-2.0", ">= contososerver-2.0 || >= contosoclient-1.0"],
+		"open_to_public_contributors": false,
+		"type_mapping": {
+			"Conceptual": "Content",
+			"ManagedReference": "Content",
+			"RestApi": "Content"
+		},
+		"build_entry_point": "docs",
+		"template_folder": "_themes"
+	}],
+	"notification_subscribers": [],
+	"branches_to_filter": [],
+	"skip_source_output_uploading": false,
+	"need_preview_pull_request": false,
+	"dependent_repositories": [{
+			"path_to_root": "_themes",
+			"url": "https://github.com/Microsoft/templates.docs.msft",
+			"branch": "master",
+			"branch_mapping": {}
+		},
+		{
+			"path_to_root": "_themes.pdf",
+			"url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+			"branch": "master"
+		}
+	],
+	"branch_target_mapping": {},
+	"need_generate_pdf_url_template": true,
+	"need_generate_intellisense": false,
+	"docs_build_engine": {
+		"name": "docfx_v3"
+	},
+	"feature_flags": {
+		"enable_publish_pipeline": true
+	},
+	"Targets": {
+		"Pdf": {
+			"template_folder": "_themes.pdf"
+		}
+	}
 }
