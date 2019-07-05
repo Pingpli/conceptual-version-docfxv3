@@ -1,4 +1,5 @@
 {
+  "build_entry_point": "docs",						  
   "docsets_to_publish": [
     {
       "docset_name": "conceptual-version-docfxv3",
@@ -6,7 +7,7 @@
       "build_output_subfolder": "conceptual-version-docfxv3",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [ "< contososerver-2.0", ">= contososerver-2.0 || >= contosoclient-1.0" ],
+      "moniker_ranges": [ "< test-client-2.0", ">= test-client-2.0 || >= test-server-1.0" ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -29,11 +30,11 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
-    },    
-    {		
- 		  "path_to_root": "_themes.pdf",		
- 		  "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-  	  "branch": "master"		
+    },
+    {
+ 	  "path_to_root": "_themes.pdf",
+	  "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+  	  "branch": "master"
     }
   ],
   "branch_target_mapping": {},

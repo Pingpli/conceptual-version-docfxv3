@@ -1,54 +1,62 @@
-# Versioning Test
+# Versioning Test for docfx v3
 
-## Product Tree
+## Moniker Tree
 
-* Contoso Platform (Family)
-  * Contoso Server (Product)
-    * contososerver-1.0
-    * contososerver-1.1
-    * contososerver-1.2
-    * contososerver-2.0
-    * contososerver-2.1
-  * Contoso Client (Product)
-    * contosoclient-1.0
-    * contosoclient-2.0
+* versioning-test-v3 (Family)
+  * test-client (Product)
+    * test-client-1.0
+    * test-client-1.1
+    * test-client-2.0
+    * test-client-3.0
+  * test-server (Product)
+    * test-server-1.0
+    * test-server-2.0
 
-## Configuration
+## Folder structure
 
-### OPS
-
-The moniker ranges under which content is published are:
-
-* `< contososerver-2.0`
-* `>= contososerver-2.0 || >= contosoclient-1.0`
-
-### DocFX
-
-The docfx.json file maps content from the legacy and active folders into similarly named groups. These groups are then mapped to the published moniker ranges as follows:
-
-* `< contososerver-2.0` maps to the `legacy` folder
-* `>= contososerver-2.0 || >= contosoclient-1.0` maps to the `active` folder
+-- legacy/: < test-client-2.0
+-- active/: >= test-client-2.0 || >= test-server-1.0
 
 ## Content
 
-The content has been created to model various scenarios that are expected to appear in real docsets.
-
 * index.md - Available for all monikers in folder.
 * overivew.md - Available for all monikers in folder; configured with moniker zones and shared content.
+* fallback.md - Available for some monikers, all other version should fallback to the latest version.
 * quickstarts - Folder should have at least one item available for all monikers.
   * quick-start-1.md - Available only for some monikers; configured through file-level metadata.
   * quick-start-2.md - Available only for some monikers; configured through file-level metadata.
-* tutorials - Folder should have at least one item available for all monikers.
-  * tutorial-1.md - Available for some monikers; All content in zones. No shared content. Purposefully left out file-level metadata.
-  * tutorial-1.md - Available for some monikers; All content in zones. No shared content. Purposefully left out file-level metadata.
-* samples - Folder will be removed for some monikers.
-  * sample-1.md - Available for some; configured through file-level metadata.
-  * sample-2.md - Available for some; configured through file-level metadata.
-* concepts - Folder will be removed for some monikers
-  * sub-concepts - Folder will be removed for some monikers
-    * sub-concept-1.md - Available for some; configured through file-level metadata.
-    * sub-concept-2.md - Available for some; configured through file-level metadata.
-  * concept-1.md - Available for some; configured through file-level metadata.
-  * concept-2.md - Available for some; configured through file-level metadata.
-* reference - TODO: demo with includes
-* resources - TODO: demo with content that nests moniker ranges, e.g. block quotes and tabs
+* resources - Available for all monikers in folder; reference to resource with same assetId but different version.
+
+```
+├───active
+│   │   fallback.md (test-client-2.0, test-server-1.0)
+│   │   index.md (test-client-2.0, test-client-3.0, test-server-1.0, test-server-2.0)
+│   │   overview.md (test-client-2.0, test-client-3.0, test-server-1.0, test-server-2.0)
+│   │   toc.yml
+│   │
+│   ├───quickstarts
+│   │       quick-start-1.md (test-client-2.0, test-server-1.0)
+│   │       quick-start-2.md (test-client-3.0, test-server-2.0)
+│   │
+│   └───resources
+│       │   resource.md (test-client-2.0, test-client-3.0, test-server-1.0, test-server-2.0)
+│       │
+│       └───media
+│               a.png
+│
+└───legacy
+    │   fallback.md (test-client-1.0)
+    │   index.md (test-client-1.0, test-client-1.1)
+    │   overview.md (test-client-1.0, test-client-1.1)
+    │   toc.yml
+    │
+    ├───quickstarts
+    │       quick-start-1.md (test-client-1.0)
+    │       quick-start-2.md (test-client-1.1)
+    │
+    └───resources
+        │   resource.md (test-client-1.0, test-client-1.1)
+        │
+        └───media
+                a.png
+```
