@@ -1,6 +1,6 @@
 ---
-title: Welcome to Versioning (Active)!
-description: Welcome to Versioning (Active)! content should display for the moniker Range as '>= netcore-2.0 || netframework-1.1 || netframework-2.0'
+title: Welcome to Versioning (Legacy)!
+description: Welcome to Versioning (Legacy)! content should display for the moniker Range as '>= netcore-2.0 || netframework-1.1 || netframework-2.0'
 author: opstest2
 ---
 
