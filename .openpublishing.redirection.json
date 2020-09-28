@@ -1,5 +1,10 @@
 { 
   "redirections": [ 
+    {
+      "source_path": "contoso/non-version/versionless.md",
+      "redirect_url": "/archive/conceptual-version-docfxv3-archive/non-v/versionless",
+      "redirect_document_id": false
+    },
     {   
         "source_path": "aspnetcore/publishing/vsts-continuous-deployment.md", 
         "redirect_url": "https://www.visualstudio.com/docs/build/aspnet/core/quick-to-azure", 
