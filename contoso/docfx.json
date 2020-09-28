@@ -14,7 +14,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "non-version/**"
         ],
         "src": "legacy"
       },
@@ -31,9 +32,27 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "non-version/**"
         ],
         "src": "active"
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ],
+        "src": "non-version",
+        "dest": "non-v"
       }
     ],
     "resource": [
@@ -45,7 +64,8 @@
         "exclude": [
           "_themes/**",
           "**/obj/**",
-          "**/includes/**"
+          "**/includes/**",
+          "non-version/**"
         ],
         "src": "legacy",
         "group": "legacy"
@@ -57,10 +77,23 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**"
+          "**/includes/**",
+          "non-version/**"
         ],
         "src": "active",
         "group": "active"
+      },
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ],
+        "src": "non-version",
+        "dest": "non-v"
       }
     ],
     "overwrite": [],
